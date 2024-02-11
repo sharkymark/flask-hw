@@ -1,16 +1,22 @@
 {
-    "name": "Sharkmark's 🦈 Flask Development",
+    "name": "Flask Development",
     "build": {
       "dockerfile": "../Dockerfile",
       "context": ".."
     },
-    "settings": { 
-      "terminal.integrated.shell.linux": "/bin/bash"
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance"
+        ],
+        "settings": { 
+          "terminal.integrated.shell.linux": "/bin/bash"
+        }  
+      }
     },
-    "forwardPorts": [5000],
-    "extensions": [
-      "ms-python.python",
-      "ms-python.vscode-pylance"
-    ]
-  }
+    "postCreateCommand": "flask run --host=0.0.0.0",
+    "forwardPorts": [5001]
+    }
+
   
