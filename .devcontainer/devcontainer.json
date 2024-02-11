@@ -1,0 +1,16 @@
+{
+    "name": "Sharkmark's 🦈 Flask Development",
+    "build": {
+      "dockerfile": "../Dockerfile",
+      "context": ".."
+    },
+    "settings": { 
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "forwardPorts": [5000],
+    "extensions": [
+      "ms-python.python",
+      "ms-python.vscode-pylance"
+    ]
+  }
+  
