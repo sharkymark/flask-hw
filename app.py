@@ -1,5 +1,5 @@
 # app.py
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -46,6 +46,16 @@ def index():
     # Retrieve commissions from the database
     commissions = Commission.query.all()
     return render_template("index.html", commissions=commissions)
+
+@app.route('/delete-row', methods=['POST'])
+def delete_row():
+    commission_ids = request.form.getlist('commission_ids')  # Get list of item IDs to delete
+    for commission_id in commission_ids:
+        commission = Commission.query.get(commission_id)
+        if commission:
+            db.session.delete(commission)
+    db.session.commit()
+    return redirect(url_for('index'))  # Redirect back to the index page or wherever appropriate
 
 with app.app_context():
     db.create_all()
