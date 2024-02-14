@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commission Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}?v={{ cache_bust }}"">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Enter Commission Details</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="quota">Quarterly Quota:</label>
+            <input type="number" step="any" name="quota" id="quota" required>
+        </div>
+        <div class="form-group">
+            <label for="variable_comp">Variable Compensation Portion:</label>
+            <input type="number" step="any" name="variable_comp" id="variable_comp" required>
+        </div>
+        <div class="form-group">
+            <label for="deal_revenue">Deal Revenue:</label>
+            <input type="number" step="any" name="deal_revenue" id="deal_revenue" required>
+        </div>
+        <input type="submit" value="Calculate" class="submit-button">
+    </form>
+</div>
+
+    <hr>
+    <h2>Commission Records</h2>
+    <table>
+        <tr>
+            <th>Created At</th>  
+            <th>Commission</th>          
+            <th>Quota Attainment</th>
+            <th>Quota</th>                      
+            <th>Variable Comp</th>
+            <th>Variable Rate</th>
+        </tr>
+        {% for commission in commissions %}
+        <tr>
+            <td>{{ commission.created_at }}</td>
+            <td>{{ commission.commission_amt }}</td>
+            <td>{{ commission.attainment }}%</td>
+            <td>{{ commission.variable_comp }}</td>
+            <td>{{ commission.quota }}</td>
+            <td>{{ commission.variable_rate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

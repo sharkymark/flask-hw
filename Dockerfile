@@ -20,6 +20,7 @@ EXPOSE 5001
 # Define environment variable
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_ENV=development
 ENV FLASK_RUN_PORT=5001
 
 # Run app.py when the container launches
