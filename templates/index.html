@@ -35,7 +35,8 @@
             <th>Created At</th>  
             <th>Commission</th>          
             <th>Quota Attainment</th>
-            <th>Quota</th>                      
+            <th>Quota</th>   
+            <th>Deal Revenue</th>                   
             <th>Variable Comp</th>
             <th>Variable Rate</th>
         </tr>
@@ -45,8 +46,9 @@
             <td>{{ commission.created_at }}</td>
             <td>{{ commission.commission_amt }}</td>
             <td>{{ commission.attainment }}%</td>
-            <td>{{ commission.variable_comp }}</td>
             <td>{{ commission.quota }}</td>
+            <td>{{ commission.deal_revenue }}</td>
+            <td>{{ commission.variable_comp }}</td>
             <td>{{ commission.variable_rate }}</td>
         </tr>
         {% endfor %}

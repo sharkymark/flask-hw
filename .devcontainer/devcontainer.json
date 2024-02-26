@@ -14,11 +14,11 @@
         }  
       }
     },
-    "postCreateCommand": "flask run",  
-    "workspaceFolder": "/workspaces",
-    "mounts": [
-      "source=${localWorkspaceFolder},target=/workspaces,type=bind,consistency=cached"
-    ],
+    "postCreateCommand": "flask run --host=0.0.0.0",  
+//    "workspaceFolder": "/workspaces",
+//    "mounts": [
+//      "source=${localWorkspaceFolder},target=/workspaces,type=bind,consistency=cached"
+//    ],
     "containerEnv": {
       "FLASK_APP": "app.py",
       "FLASK_ENV": "development",

@@ -16,6 +16,7 @@ class Commission(db.Model):
     attainment = db.Column(db.Float, nullable=False)
     variable_comp = db.Column(db.Float, nullable=False)
     quota = db.Column(db.Float, nullable=False)
+    deal_revenue = db.Column(db.Float, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 
@@ -36,7 +37,7 @@ def index():
         attainment = (deal_revenue / quota) * 100
 
         # Save to database
-        new_commission = Commission(variable_comp=variable_comp, commission_amt=commission_amt, attainment=attainment, quota=quota, variable_rate=variable_rate)
+        new_commission = Commission(variable_comp=variable_comp, commission_amt=commission_amt, attainment=attainment, quota=quota, deal_revenue=deal_revenue, variable_rate=variable_rate)
         db.session.add(new_commission)
         db.session.commit()
 
