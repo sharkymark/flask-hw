@@ -7,24 +7,15 @@
     "customizations": {
       "vscode": {
         "extensions": [
-          "ms-python.python"
+          "ms-python.python",
+          "ms-python.vscode-pylance"
         ],
         "settings": { 
           "terminal.integrated.shell.linux": "/bin/bash"
         }  
       }
     },
-    "postCreateCommand": "flask run --host=0.0.0.0",  
-//    "workspaceFolder": "/workspaces",
-//    "mounts": [
-//      "source=${localWorkspaceFolder},target=/workspaces,type=bind,consistency=cached"
-//    ],
-    "containerEnv": {
-      "FLASK_APP": "app.py",
-      "FLASK_ENV": "development",
-      "FLASK_DEBUG": "1",
-      "TEMPLATES_AUTO_RELOAD": "True"
-    },
+    "postCreateCommand": "flask run --host=0.0.0.0",
     "forwardPorts": [5001]
     }
 
