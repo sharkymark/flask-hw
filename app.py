@@ -23,7 +23,7 @@ class Commission(db.Model):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        # these variables will also be persisted in the database
+        # these variables will also be persisted in the database table
         quota = float(request.form['quota'])
         variable_comp = float(request.form['variable_comp'])
         deal_revenue = float(request.form['deal_revenue'])
