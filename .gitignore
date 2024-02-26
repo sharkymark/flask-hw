@@ -1,2 +1,0 @@
-# ignore sqlite3 directory and database file. first time app runs, it is created
-instance/
