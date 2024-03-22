@@ -7,7 +7,9 @@
     "customizations": {
       "vscode": {
         "extensions": [
-          "ms-python.python"
+          "ms-python.python",
+          "GitHub.copilot",
+          "ms-python.pylance"
         ],
         "settings": { 
           "terminal.integrated.shell.linux": "/bin/bash"
