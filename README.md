@@ -20,6 +20,10 @@ flask run --host=0.0.0.0
 
 Open a web browser and enter `localhost:5001` to see the Flask app
 
+## Known Issues
+
+In Coder's `envbuilder` project that leverages dev containers, lifecycle scripts in `devcontainer.json` like `postCreateCommand` and `postStartCommand` must redirect output to a file or `/dev/null` or the workspace hangs. Add `> /dev/null 2>&1` after any commands in those scripts.
+
 ## Resources
 
 [Related repo with Coder envbuilder support](https://github.com/sharkymark/envb-flask-hw)
