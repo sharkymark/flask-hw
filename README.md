@@ -10,7 +10,7 @@ I'm using a dev container so I don't have to install Python and Flask on my Mac.
 
 ## Known Issues
 
-This dev container does not appear to start Flask as a `CMD` at the end of the Dockerfile, but as `postCreateCommand` in the `devcontainer.json` works.
+This dev container does not appear to start Flask as a `CMD` at the end of the Dockerfile, but as `postStartCommand` in the `devcontainer.json` works. Note `postCreateCommand` only runs once so not the right one to use.
 
 If Flask does not start, manually start the flask app with this command run within the repo directory.
 
