@@ -2,6 +2,8 @@
 
 Flask is WSGI web app framework written in Python. This app calculates sales commissions based on user input in a standard web browser.
 
+![app screenshot](./docs/images/flask-webapp.png)
+
 ## dev container
 
 I'm using a dev container so I don't have to install Python and Flask on my Mac. All I need a is a Docker daemon, which in my case is `colima` and VS Code with the dev container extension.
@@ -31,3 +33,20 @@ In Coder's `envbuilder` project that leverages dev containers, lifecycle scripts
 [Flask](https://flask.palletsprojects.com/)
 
 [Dev Container specification](https://containers.dev/implementors/spec/)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE)
+
+## Contributing
+
+### Disclaimer: Unmaintained and Untested Code
+
+Please note that this program is not actively maintained or tested. While it may work as intended, it's possible that it will break or behave unexpectedly due to changes in dependencies, environments, or other factors.
+
+Use this program at your own risk, and be aware that:
+1. Bugs may not be fixed
+1. Compatibility issues may arise
+1. Security vulnerabilities may exist
+
+If you encounter any issues or have concerns, feel free to open an issue or submit a pull request.
