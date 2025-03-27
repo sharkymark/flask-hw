@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # get ps utility in the container
-RUN apt-get update && apt-get install -y procps ssh git net-tools htop
+RUN apt-get update && apt-get install -y sudo curl procps ssh git net-tools htop
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
