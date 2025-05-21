@@ -6,7 +6,7 @@ Flask is WSGI web app framework written in Python. This app calculates sales com
 
 I'm using a dev container so I don't have to install Python and Flask on my Mac. All I need a is a Docker daemon, which in my case is `colima` and VS Code with the dev container extension.
 
-## Coder env builder
+## Lifecycle event
 
 This dev container has been modified to use the `postStartCommand` which is a lifecycle command that runs after the container is started and the dev container is built.  The `postStartCommand` is run in the background and the output is redirected to a log file with no hangup protection. The command is as follows:
 
